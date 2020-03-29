@@ -12,7 +12,7 @@
         <div class="wc-date-row">{{date | date: 'dd'}}</div>
         <div class="wc-my-sec">
             <div class="wc-month-row">
-                <div>{{date | date: 'MMMM'}}</div>
+                <div>{{settings?.cal_months_labels[date.getMonth()]}}</div>
             </div>
             <div class="wc-year-row">
                 <div>{{date | date: 'yyyy'}}</div>
@@ -27,12 +27,12 @@
     </div>
     <div class="wc-details">
         <i class="wc-prev fa fa-angle-left" (click)="prevMonth($event)"></i>
-        <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{date | date: 'MMMM'}}
+        <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{settings?.cal_months_labels[date.getMonth()]}}
             <!-- <i ng-show="!monthsView" class="fa fa-arrow-down"></i>
                                  <i ng-show="monthsView" class="fa fa-arrow-up"></i> -->
         </div>
         <div class="month-year" *ngIf="!settings.bigBanner" (click)="toggleMonthView()">
-            {{date | date: 'MMMM'}}
+            {{settings?.cal_months_labels[date.getMonth()]}}
             <!--    <i ng-show="!monthsView" class="fa fa-arrow-down" (click)="toggleMonthView()"></i>
                                     <i ng-show="monthsView" class="fa fa-arrow-up" (click)="toggleMonthView()"></i>  -->
 
@@ -127,7 +127,7 @@
             <div class="wc-my">
                 <div class="wc-month">
                     <div>
-                        {{dateRange.startDate | date: 'MMMM'}} {{dateRange.startDate | date: 'yyyy'}}
+                        {{dateRange.startDate.getMonth()}} {{dateRange.startDate | date: 'yyyy'}}
                     </div>
                 </div>
                 <div class="wc-year">
@@ -144,7 +144,7 @@
             <div class="wc-my">
                 <div class="wc-month">
                     <div>
-                        {{dateRange.endDate | date: 'MMMM'}} {{dateRange.endDate | date: 'yyyy'}}
+                        {{settings?.cal_months_labels[dateRange.endDate.getMonth()]}} {{dateRange.endDate | date: 'yyyy'}}
                     </div>
                 </div>
                 <div class="wc-year">
@@ -156,12 +156,12 @@
     <div class="dp-left-section">
         <div class="wc-details">
             <i class="wc-prev fa fa-angle-left" (click)="prevMonth($event)"></i>
-            <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{leftDate | date: 'MMMM'}}
+            <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{settings?.cal_months_labels[leftDate.getMonth()]}}
                 <!-- <i ng-show="!monthsView" class="fa fa-arrow-down"></i>
                                  <i ng-show="monthsView" class="fa fa-arrow-up"></i> -->
             </div>
             <div class="month-year" *ngIf="!settings.bigBanner" (click)="toggleMonthView()">
-                {{leftDate | date: 'MMMM'}}
+                {{settings?.cal_months_labels[leftDate.getMonth()]}}
                 <!--    <i ng-show="!monthsView" class="fa fa-arrow-down" (click)="toggleMonthView()"></i>
                                     <i ng-show="monthsView" class="fa fa-arrow-up" (click)="toggleMonthView()"></i>  -->
 
@@ -229,12 +229,12 @@
     <div class="dp-right-section">
         <div class="wc-details">
             <i class="wc-prev fa fa-angle-left" (click)="prevMonth($event)"></i>
-            <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{rightDate | date: 'MMMM'}}
+            <div class="month-year" *ngIf="settings.bigBanner" (click)="toggleMonthView()">{{settings?.cal_months_labels[rightDate.getMonth()]}}
                 <!-- <i ng-show="!monthsView" class="fa fa-arrow-down"></i>
                                  <i ng-show="monthsView" class="fa fa-arrow-up"></i> -->
             </div>
             <div class="month-year" *ngIf="!settings.bigBanner" (click)="toggleMonthView()">
-                {{rightDate | date: 'MMMM'}}
+                {{settings?.cal_months_labels[rightDate.getMonth()]}}
                 <!--    <i ng-show="!monthsView" class="fa fa-arrow-down" (click)="toggleMonthView()"></i>
                                     <i ng-show="monthsView" class="fa fa-arrow-up" (click)="toggleMonthView()"></i>  -->
 

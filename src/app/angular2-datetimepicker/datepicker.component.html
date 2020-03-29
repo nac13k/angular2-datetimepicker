@@ -48,13 +48,7 @@
     </div>
     <table class="calendar-header" [hidden]="yearView == true || monthsView == true">
         <tr>
-            <td class="calendar-header-day">Su</td>
-            <td class="calendar-header-day">Mo</td>
-            <td class="calendar-header-day">Tu</td>
-            <td class="calendar-header-day">We</td>
-            <td class="calendar-header-day">Th</td>
-            <td class="calendar-header-day">Fr</td>
-            <td class="calendar-header-day">Sa</td>
+            <td *ngFor="let day of defaultSettings?.cal_days_labels" class="calendar-header-day">{{day}}</td>
         </tr>
     </table>
     <div class="months-view" [hidden]="!monthsView" (click)="setMonth($event)">
@@ -90,7 +84,7 @@
             </div>
         </div>
         <div class="time-view-btn">
-            <button class="button" (click)="setTimeView()">Set Time</button>
+            <button type="button" class="button" (click)="setTimeView()">Set Time</button>
         </div>
     </div>
     <table class="calendar-days" (click)="setDay($event);" [hidden]="monthsView || yearView">
@@ -183,13 +177,7 @@
         </div>
         <table class="calendar-header" [hidden]="yearView == true || monthsView == true">
             <tr>
-                <td class="calendar-header-day">Su</td>
-                <td class="calendar-header-day">Mo</td>
-                <td class="calendar-header-day">Tu</td>
-                <td class="calendar-header-day">We</td>
-                <td class="calendar-header-day">Th</td>
-                <td class="calendar-header-day">Fr</td>
-                <td class="calendar-header-day">Sa</td>
+                <td *ngFor="let day of defaultSettings?.cal_days_labels" class="calendar-header-day">{{day}}</td>
             </tr>
         </table>
         <div class="months-view" [hidden]="!monthsView" (click)="setMonth($event)">
@@ -224,7 +212,7 @@
                 </div>
             </div>
             <div class="time-view-btn">
-                <button class="button" type="button" (click)="setTimeView()">Set Time</button>
+                <button type="button" class="button" type="button" (click)="setTimeView()">Set Time</button>
             </div>
         </div>
         <table class="calendar-days" (click)="setDay($event,'range');" [hidden]="monthsView || yearView">
@@ -262,13 +250,7 @@
         </div>
         <table class="calendar-header" [hidden]="yearView == true || monthsView == true">
             <tr>
-                <td class="calendar-header-day">Su</td>
-                <td class="calendar-header-day">Mo</td>
-                <td class="calendar-header-day">Tu</td>
-                <td class="calendar-header-day">We</td>
-                <td class="calendar-header-day">Th</td>
-                <td class="calendar-header-day">Fr</td>
-                <td class="calendar-header-day">Sa</td>
+                <td *ngFor="let day of defaultSettings?.cal_days_labels" class="calendar-header-day">{{day}}</td>
             </tr>
         </table>
         <div class="months-view" [hidden]="!monthsView" (click)="setMonth($event)">
@@ -303,7 +285,7 @@
                 </div>
             </div>
             <div class="time-view-btn">
-                <button class="button" (click)="setTimeView()">Set Time</button>
+                <button type="button" class="button" (click)="setTimeView()">Set Time</button>
             </div>
         </div>
         <table class="calendar-days" (click)="setDay($event,'range');" [hidden]="monthsView || yearView">

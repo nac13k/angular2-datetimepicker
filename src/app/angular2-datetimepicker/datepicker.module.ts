@@ -4,10 +4,8 @@ import { DatePicker } from './datepicker.component';
 import { FormsModule } from '@angular/forms';
 import { ClickOutsideDirective } from './clickOutside';
 @NgModule({
-    imports: [CommonModule,FormsModule],
+    imports: [CommonModule, FormsModule],
     declarations: [DatePicker, ClickOutsideDirective],
-    exports: [DatePicker,FormsModule, ClickOutsideDirective]
+    exports: [DatePicker, FormsModule, ClickOutsideDirective]
 })
-export class AngularDateTimePickerModule{
-
-}
+export class AngularDateTimePickerModule { }

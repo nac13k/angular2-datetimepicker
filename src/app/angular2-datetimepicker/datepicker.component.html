@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="time-view-btn">
-            <button type="button" class="button" (click)="setTimeView()">Set Time</button>
+            <button type="button" class="button" (click)="setTimeView()">{{settings?.buttons?.setTime}}</button>
         </div>
     </div>
     <table class="calendar-days" (click)="setDay($event);" [hidden]="monthsView || yearView">
@@ -100,7 +100,7 @@
         <div class="clock-icon" *ngIf="!settings.bigBanner">
             <i class="fa fa-clock-o" aria-hidden="true" (click)="timeView = !timeView"></i>
         </div>
-        <div class="ok" (click)="done()"><i class="fa fa-check"></i>Done
+        <div class="ok" (click)="done()"><i class="fa fa-check"></i>{{settings?.buttons?.done}}
         </div>
     </div>
 </div>
@@ -120,7 +120,7 @@
 <div *ngIf="settings.rangepicker" class="range-date-popover" [ngClass]="{'banner-true': settings.bigBanner == true}" [hidden]="!popover">
     <div class="range-banner">
         <div class="wc-banner-col" *ngIf="settings.bigBanner">
-            <label>FROM</label>
+            <label>{{settings?.buttons?.from}}</label>
             <div class="wc-day">
                 {{dateRange.startDate | date: 'dd'}}
             </div>
@@ -139,7 +139,7 @@
             <i class="fa fa-angle-right"></i>
         </div>
         <div class="wc-banner-col" *ngIf="settings.bigBanner">
-            <label>TO</label>
+            <label>{{settings?.buttons?.to}}</label>
             <div class="wc-day">{{dateRange.endDate | date: 'dd'}}</div>
             <div class="wc-my">
                 <div class="wc-month">
@@ -212,7 +212,7 @@
                 </div>
             </div>
             <div class="time-view-btn">
-                <button type="button" class="button" type="button" (click)="setTimeView()">Set Time</button>
+                <button type="button" class="button" type="button" (click)="setTimeView()">{{settings?.buttons?.setTime}}</button>
             </div>
         </div>
         <table class="calendar-days" (click)="setDay($event,'range');" [hidden]="monthsView || yearView">
@@ -285,7 +285,7 @@
                 </div>
             </div>
             <div class="time-view-btn">
-                <button type="button" class="button" (click)="setTimeView()">Set Time</button>
+                <button type="button" class="button" (click)="setTimeView()">{{settings?.buttons?.setTime}}</button>
             </div>
         </div>
         <table class="calendar-days" (click)="setDay($event,'range');" [hidden]="monthsView || yearView">
@@ -300,10 +300,10 @@
     </div>
     <div class="cal-util">
         <ul class="util-list">
-            <li><a>Last week</a></li>
-            <li><a (click)="getCurrentWeek()">Current week</a></li>
-            <li><a>Next week</a></li>
+            <li><a>{{settings?.buttons?.lastWeek}}</a></li>
+            <li><a (click)="getCurrentWeek()">{{settings?.buttons?.currentWeek}}</a></li>
+            <li><a>{{settings?.buttons?.nextWeek}}</a></li>
         </ul>
-        <button class="button btn-xs" type="button" (click)="done()"><i class="fa fa-check"></i>Done</button>
+        <button class="button btn-xs" type="button" (click)="done()"><i class="fa fa-check"></i>{{settings?.buttons?.done}}</button>
     </div>
 </div>

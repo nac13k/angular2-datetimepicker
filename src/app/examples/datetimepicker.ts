@@ -13,6 +13,15 @@ export class DateTimePickerExample implements OnInit {
         timePicker: true,
         format: 'dd-MM-yyyy hh:mm',
         defaultOpen: true,
+        buttons: {
+          setTime: 'OK',
+          done: 'OK',
+          from: 'DE',
+          to: 'A',
+          lastWeek: 'Ultima semana',
+          currentWeek: 'Semana actual',
+          nextWeek: 'Siguiente semana'
+        },
         cal_days_labels: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
         cal_full_days_lables: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
         cal_months_labels: ['Enero', 'Febrero', 'Marzo', 'Abril',

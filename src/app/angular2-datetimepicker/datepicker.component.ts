@@ -53,6 +53,15 @@ export class DatePicker implements OnInit, ControlValueAccessor {
         defaultOpen: false,
         bigBanner: true,
         timePicker: false,
+        buttons: {
+            setTime: 'Set Time',
+            done: 'Done',
+            from: 'FROM',
+            to: 'TO',
+            lastWeek: 'Last Week',
+            currentWeek: 'Current Week',
+            nextWeek: 'NextWeek'
+        },
         format: 'dd-MMM-yyyy hh:mm a',
         cal_days_labels: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
         cal_full_days_lables: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
